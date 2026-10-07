@@ -1,0 +1,585 @@
+/* =====================================================
+   TEKZOBD DIGITAL VISITING CARD
+   MODERN MOBILE-FIRST UI
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #142d52 0%, #071426 42%, #030a13 100%);
+    color: #172033;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   MAIN DIGITAL CARD
+===================================================== */
+
+.digital-card {
+    width: min(94%, 390px);
+    min-height: 100vh;
+    margin: 18px auto;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   SHOP HEADER
+===================================================== */
+
+.shop-header {
+    width: 100%;
+    padding: 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.shop-banner {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    object-position: center;
+    background: #1f054e;
+}
+
+
+/* =====================================================
+   PROPRIETOR
+===================================================== */
+
+.proprietor {
+    width: calc(100% - 32px);
+    margin: -22px auto 0;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid #edf0f6;
+    border-radius: 17px;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 8px 25px rgba(21, 38, 68, 0.12);
+}
+
+.proprietor-photo {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #3156d8;
+    padding: 2px;
+    background: #ffffff;
+}
+
+.proprietor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.proprietor-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.proprietor-info h2 {
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #101827;
+}
+
+.proprietor-info p {
+    margin-top: 1px;
+    font-size: 11px;
+    color: #718096;
+}
+
+
+/* =====================================================
+   QUICK ACTIONS
+===================================================== */
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    padding: 16px 14px 6px;
+}
+
+.action-button,
+.action-btn {
+    min-width: 0;
+    min-height: 62px;
+    padding: 7px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #1b2638;
+    background: #f7f9fd;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.action-button:hover,
+.action-btn:hover {
+    background: #eef3ff;
+    box-shadow: 0 5px 14px rgba(48, 83, 210, 0.08);
+}
+
+.action-button:active,
+.action-btn:active {
+    transform: scale(0.94);
+}
+
+.action-button span,
+.action-btn span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(25, 42, 72, 0.07);
+}
+
+.action-button strong,
+.action-btn strong {
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.action-button small,
+.action-btn small {
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.section {
+    padding: 21px 17px 3px;
+}
+
+.section h2 {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 11px;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 750;
+    color: #101827;
+}
+
+.section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 4px;
+    height: 17px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #315bdc, #7138d4);
+}
+
+
+/* =====================================================
+   ABOUT SHOP
+===================================================== */
+
+.about-shop {
+    padding-top: 18px;
+}
+
+.about-shop p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #687386;
+}
+
+
+/* =====================================================
+   PRODUCTS & SERVICES
+===================================================== */
+
+.services {
+    padding-top: 21px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.service-card {
+    min-height: 76px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: linear-gradient(145deg, #fbfcff, #f5f7fb);
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(28, 47, 83, 0.08);
+}
+
+.service-card span {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: #ffffff;
+    border-radius: 9px;
+    box-shadow: 0 2px 7px rgba(30, 45, 70, 0.06);
+}
+
+.service-card h3 {
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #202a3b;
+}
+
+
+/* =====================================================
+   SHOP INFORMATION
+===================================================== */
+
+.shop-info {
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px 0;
+    border-bottom: 1px solid #eef1f5;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item > span {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4ff;
+    border: 1px solid #e3eaff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 1px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #293448;
+}
+
+.info-item p {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #6c7789;
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-section {
+    padding-top: 20px;
+}
+
+.map-button {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #172b68, #3c45a5);
+    color: #ffffff;
+    border-radius: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 7px 18px rgba(42, 54, 150, 0.18);
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.map-button:hover {
+    box-shadow: 0 9px 22px rgba(42, 54, 150, 0.25);
+}
+
+.map-button:active {
+    transform: scale(0.98);
+}
+
+.map-container {
+    width: 100%;
+    height: 155px;
+    margin-top: 10px;
+    border-radius: 13px;
+    overflow: hidden;
+    border: 1px solid #e7ebf2;
+    box-shadow: 0 4px 14px rgba(25, 39, 65, 0.07);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* =====================================================
+   SOCIAL / ONLINE
+===================================================== */
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+}
+
+.social-links a {
+    min-height: 40px;
+    padding: 8px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    color: #354052;
+    background: #f7f9fc;
+    border: 1px solid #e7ebf1;
+    border-radius: 11px;
+    font-size: 11px;
+    font-weight: 650;
+    transition: 0.18s ease;
+}
+
+.social-links a:hover {
+    background: #eef3ff;
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.shop-footer {
+    margin-top: 24px;
+    padding: 22px 15px 18px;
+    text-align: center;
+    background: linear-gradient(145deg, #101927, #0b1320);
+    color: #ffffff;
+}
+
+.footer-logo {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 8px;
+    padding: 4px;
+    background: #ffffff;
+    border-radius: 11px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.shop-footer h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.shop-footer p {
+    margin-top: 2px;
+    font-size: 10px;
+    opacity: 0.65;
+}
+
+.shop-footer small {
+    display: block;
+    margin-top: 11px;
+    font-size: 9px;
+    opacity: 0.4;
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .digital-card {
+        width: 96%;
+        margin: 8px auto;
+        border-radius: 20px;
+    }
+
+    .shop-banner {
+        height: 150px;
+    }
+
+    .proprietor {
+        width: calc(100% - 24px);
+        gap: 9px;
+    }
+
+    .proprietor-photo {
+        width: 46px;
+        height: 46px;
+    }
+
+    .proprietor-info h2 {
+        font-size: 16px;
+    }
+
+    .quick-actions {
+        gap: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .action-button,
+    .action-btn {
+        min-height: 58px;
+    }
+
+    .action-button span,
+    .action-btn span {
+        width: 27px;
+        height: 27px;
+        font-size: 15px;
+    }
+
+    .action-button strong,
+    .action-btn strong,
+    .action-button small,
+    .action-btn small {
+        font-size: 9px;
+    }
+
+    .section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .service-list {
+        gap: 6px;
+    }
+
+    .service-card {
+        min-height: 72px;
+        padding: 10px;
+    }
+
+    .map-container {
+        height: 140px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL SCREEN
+===================================================== */
+
+@media (max-width: 320px) {
+
+    .quick-actions {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3px;
+    }
+
+    .action-button,
+    .action-btn {
+        padding-left: 1px;
+        padding-right: 1px;
+        border-radius: 11px;
+    }
+
+    .action-button span,
+    .action-btn span {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+
+    .action-button strong,
+    .action-btn strong,
+    .action-button small,
+    .action-btn small {
+        font-size: 8px;
+    }
+}
